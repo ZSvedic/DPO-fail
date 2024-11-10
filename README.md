@@ -9,12 +9,12 @@ Tested on WSL Ubuntu with RTX 4090 GPU.
 1. Download or git clone this project.
 2. Create venv with "python -m venv .venv-zelreq" then activate it with "source .venv-zelreq/bin/activate".
 3. Install *specific* requirements with "pip install -r zel-requirements.txt".
-4. Open [Zel-Finetune-Llama3-using-DPO.ipynb](Zel-Finetune-Llama3-using-DPO.ipynb) in VSCode (or some other IDE to run .ipynb notebooks), set kernel to before mentioned ".venv-zelreq" venv.
 
 ## Reproduce DPO fail on a custom dataset
 
 Custom dataset: https://huggingface.co/datasets/ZSvedic/phi3-arena-short-dpo/viewer/default/train?row=2
 
+4. Open [Zel-Finetune-Llama3-using-DPO.ipynb](Zel-Finetune-Llama3-using-DPO.ipynb) in VSCode (or some other IDE to run .ipynb notebooks), set kernel to before mentioned ".venv-zelreq" venv.
 5. Run all cells in notebook. Llama 3.1 is being quantized, LoRA is applied, and is fine tuned on the dataset which should teach model to prefer shorter answers.
 6. Notice that:
    - DPO seems to work fine, loss and accuracy both improve very fast, after 30 iterations.
